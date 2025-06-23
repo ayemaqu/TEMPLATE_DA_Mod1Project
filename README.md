@@ -233,6 +233,6 @@ Based on our analysis, here are a few insights and actionable suggestions that c
     ├── 01.1_dropping_data.upynb
 │   ├── 02_eda_insights.ipynb
 └── slides/
-    └── final_presentation.pptx
+    └── Itzel_Ayema_Cafe_Insights.pptx
 |
 └── READE.md
