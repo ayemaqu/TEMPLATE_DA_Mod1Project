@@ -218,14 +218,21 @@ Based on our analysis, here are a few insights and actionable suggestions that c
 ```text
 .
 ├── data/
-│   ├── raw/ 
+│   ├── raw/
+         ├── cafe_sales.xlsx
 │   └── cleaned/
+         ├── 01_cleaned_cafe_data.csv
+         ├── 02_Excel_Clean.xlsx
+         ├── 03_Excel_Clean.xlsx
+         ├── 04_FINAL_clean_data.xlsx
 ├── excel/
-│   ├── analysis_workbook.xlsx
-│   └── cleaning_template.xlsx
+│   ├── Analysis_cafe_workbook.xlsx
+│   └── clean_cafe_template.xlsx
 ├── notebooks/
-│   ├── 01_data_cleaning.ipynb
+│   ├── 01_initial_cleaning_dtypes_nans.ipynb
+    ├── 01.1_dropping_data.upynb
 │   ├── 02_eda_insights.ipynb
-│   └── README.md
 └── slides/
     └── final_presentation.pptx
+|
+└── READE.md
