@@ -174,6 +174,46 @@ Based on our analysis, here are a few insights and actionable suggestions that c
 - **Label All Products:** We encountered several “mystery items” in the data — transactions with no item name. Ensuring every sale is labeled with a product name will allow for better analysis in the future and help you see exactly which products are driving revenue.
 - **Track Customer Preferences Over Time:** If possible, consider collecting more information about customer preferences or feedback. Knowing who your customers are and what they prefer helps with personalized marketing and product decisions
 
+## Above and beyond 
+<img src="https://github.com/user-attachments/assets/abd5e21f-08f9-4f5e-a0ef-cc16cd4433f6" alt="still no food" style="width:500;" />
+
+- The graph above is To better understand how busy the café is on a typical day, we created a histogram using Python. A histogram is a special kind of bar chart that shows how often certain ranges of values appear — in this case, how many transactions occurred per day throughout the year. This chart shows us:
+    - The x-axis shows the number of transactions made in a day (for example, 15, 20, 25, etc.).
+    - The y-axis shows how many days had that number of transactions.
+- Each bar represents a group of days with similar activity levels — like all the days that had between 25 and 27 orders.
+- _Why is this helpful?_
+    - It shows the most common daily traffic range — the tallest bar indicates the transaction range that happened most often.
+    - It helps us understand how consistent the business is day-to-day.
+    - We can also spot outliers, like unusually quiet or overly busy days.
+    - Instead of reviewing dates one by one, we get a quick overview of traffic patterns.
+- _Key insights:_
+    - The café most often gets between 25–30 transactions per day, suggesting that’s the typical daily traffic.
+    - The curve is fairly balanced, meaning business is relatively steady.
+    - A few days saw much lower or higher activity — those might be worth exploring (for example, holidays or special events).
+- _Questions This Visualization Helps Answer:_
+    - What’s the usual level of customer activity per day?
+    - Do we have slow or peak days worth investigating?
+    - How steady is business over time
+    - Is there a clear “normal” range we can use for planning staff or promotions?
+
+<img src="https://github.com/user-attachments/assets/ead9bae5-869f-447f-845b-bdf233ce100d" alt="i get to eat after this" style="width:500;" />
+
+- Top Revenue-Generating Items: The bar chart above displays total revenue earned by each item throughout 2023, ordered from highest to lowest.
+    - Salads were the highest revenue-generating item, followed closely by sandwiches and smoothies.
+    - Cookies and “ITEM” (mystery item) generated the least revenue.
+- _Key Takeaways:_
+    - Rather than removing lower-performing items like cookies, the café could increase their appeal through strategic bundling or promotions.
+        - Example: Pair cookies and tea together as a small treat combo.
+        - Example: Offer a sandwich + smoothie bundle during lunchtime rushes.
+    - These approaches align with observed purchasing behavior and can:
+        - Increase average transaction value
+        - Improve product visibility
+        - Enhance the customer experience
+- _Recommendation to Café Owner:_
+    - Use this insight to drive menu optimization and sales strategy:
+    - Focus on promoting mid-performing items through bundles
+    - Continue supporting best-sellers like salads while exploring upsell opportunities
+    - Consider bundling or repositioning items instead of eliminating them outright
 ## Folder Structure (EXAMPLE ONLY)
 ```text
 .
