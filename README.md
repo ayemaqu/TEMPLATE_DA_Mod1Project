@@ -89,11 +89,53 @@ This analysis was approached with the mindset that the business owner is not nec
         - We also included a column labeled **“Mystery Item”** — even though we don’t know exactly what product it represents, we noticed that it still brought in revenue during specific months. Rather than drop this data, we decided to keep it because it still contributes to the overall profit and supports our goal of identifying the most profitable month.
 
 
-- Additional analysis looked at
-- Any bonus feature engineering
+### Additional analysis looked at
+- From this visualization below, we can clearly see how much profit was generated each month. The line chart highlights monthly trends and fluctuations in total revenue, making it easier to spot both the strongest and weakest periods of the year. One key insight is that **June is the most profitable month**, but there are also noticeable dips in revenue during several points in the year — most significantly in February, which had the lowest revenue, suggesting a possible loss in customer traffic. Smaller dips also occur between **March and May**, **June to July**, **August to September**, and **October to November**.
+    - <img src="https://github.com/user-attachments/assets/c5da7144-b230-4c1b-8072-d6722e4d3bb4" alt="im so hungry" style="width:900;" />
+
+    - These recurring declines suggest opportunities for improvement. To address these slower periods, the business could consider seasonal promotions, bundled deals, or targeted marketing campaigns, especially through social media. Engaging customers during these down months may help stabilize revenue and attract repeat visitors. On the flip side, the business should continue doing what worked well during the high-performing months like June — whether that was strong marketing, product launches, or events — and try to replicate or build on that success.
+
+
+- This table below was made to analyze weekly sales trends throughout 2023, we created a structure that grouped transaction data into weekly intervals.
+    - <img src="https://github.com/user-attachments/assets/7b9265e9-7602-4278-a8b5-e919244507ab" alt="food" style="width:900;" />
+        
+        - We began with the start date of January 1, 2023, and incremented by 7-day intervals to define each week up to December 31, 2023.
+        - Using Excel, we applied the `=SUMIFS()` function to calculate the total quantity of items sold within each week. A typical formula looked like:
+            - `=SUMIFS(Quantity, Date, “>=”&Start_Date, Date, “<”&End_Date)`
+                - The `>=` operator includes all values from the start date, while `<` ensures the end date is not included—effectively capturing a full 7-day window.
+                - The & operator links date values from cells into the formula criteria.
+            - This logic was repeated across the dataset to compute weekly totals. We also layered in additional conditions (e.g., item name) to understand how much of each product was sold weekly, which helped us track product demand over time.
+ 
+- The graph provides a visual breakdown of total spending across each day of the week in 2023. Each column represents a day (Sunday through Saturday), while the different shades of purple indicate the contribution of each product category (e.g., cookies, salad, tea) to that day’s total revenue.
+    - <img src="https://github.com/user-attachments/assets/9c77ffb4-ba06-473e-9112-3a0431852ced" alt="yum" style="width:900;" />
+
+    - The graph provides a visual breakdown of total spending across each day of the week in 2023. Each column represents a day (Sunday through Saturday), while the different shades of purple indicate the contribution of each product category (e.g., cookies, salad, tea) to that day’s total revenue.
+        - Legend: The legend at the top shows which shade corresponds to which item.
+        - Labels: Each segment is labeled with the exact dollar amount, providing clear visibility into how much each item contributed per day.
+    - To generate this visualization:
+        - used the `=WEEKDAY()` function in Excel to convert each transaction date into a weekday index (1 = Sunday, 7 = Saturday).
+        - Then, we applied `=SUMIFS()` to calculate the total revenue for each item by day of the week. The general formula was: `=SUMIFS(Grand_Total, Weekday_Column, [Specific_Day])`
+            - This allowed us to not only compute the grand total per weekday but also break it down by individual item type.
+            - We used additional criteria within `SUMIFS()` to filter by both item and weekday, enabling us to compare weekend vs. weekday performance.
+            - For example:
+                - `=SUM(Weekday cells 2–6)` gives the total for weekdays.
+                - `=SUM(Weekday cells 1 and 7)` gives the total for weekends.
+
+    - This visualization helped identify which days generated the highest revenue and which items performed best on those days — valuable insights for scheduling, promotions, and inventory planning.
+
+
+### Any bonus feature engineering
+- Excel and Python Integration: We used both Excel and Python to engineer new columns that allowed for deeper analysis. One example includes extracting the day of the week from each transaction, and labeling whether it occurred on a weekday or weekend. This helps us identify customer behavior patterns across the week.
+- **Location Flagging**: We flagged the location column to mark rows with values like `"UNKNOWN"` or `"ERROR"`. Flagging means we didn’t remove or change any data — we simply created a new column to label problematic or missing entries, making them easier to track and filter during analysis.
+- **Month Extraction**: We created a new column by extracting the month from the `Transaction Date` field. This was done in both numeric format (1–12) and text format (e.g., January, February).
+    - ✅ Feature Created: `Month` or `Month_Name`
+    - ✅ Helps With: Monthly trend analysis, seasonal patterns, and comparing profitability across months
+
+
 
 ## Reflections
-- Challenges we faced
+### Challenges we faced
+  
 - Any biases
 - What we would do differently next time
 
