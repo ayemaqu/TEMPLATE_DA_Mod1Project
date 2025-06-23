@@ -59,8 +59,36 @@ This analysis was approached with the mindset that the business owner is not nec
 
 
 ## Key Findings
-- Summary stats (mean, median, etc.)
-- Insights from trends by month/day
+### Summary stats (mean, median, etc.)
+- _Monthly Revenue Trends_ (Using Excel)
+  - This table summarizes monthly revenue using Excel functions. To calculate how much revenue was generated each month in 2023, Itzel used the `=MONTH()` function to extract month numbers from transaction dates.
+ 
+    - <img src="https://github.com/user-attachments/assets/8c78e6ae-afee-48bd-80c3-4ea4be47004d" alt="table1" style="width:800px;" />
+
+      - This allowed the use of `=SUMIFS()` to total all revenue for each month.
+      - Once each month's total was calculated, she used =`SUM()` to find the total yearly revenue, and functions like =MAX() and =MIN() to identify the highest and lowest revenue months.
+- The graph below shows the most profitable month: June, Least profitable month: February. The bar graph visualizes these totals clearly, making it easy to spot strong and weak months at a glance
+        - <img src="https://github.com/user-attachments/assets/35132d1d-edb8-4b19-b836-8c20d45887da" alt="table1" style="width:800px;" />
+
+### Insights from trends by month/day
+- The table below shows trends by month and day
+    - <img src="https://github.com/user-attachments/assets/451b1194-62be-4408-a662-6d427d8974da" alt="table2" style="width:900;" />
+    
+    - This chart displays the total revenue generated for each day of the week across the entire year of 2023. To calculate this, we used Excel’s =WEEKDAY() function to convert each date into a number from 1 to 7, where 1 = Sunday and 7 = Saturday. This allowed us to categorize each transaction by day of the week.
+    - To find the total amount spent on each specific day, we used the `=SUMIFS()` function. For example, `=SUMIFS([Grand Total], [Weekday Column], 2)` would return the total for Monday (where 2 represents Monday).
+    - We extended this method by adding extra criteria to calculate how much revenue each individual item brought in on each weekday or weekend, allowing us to understand sales patterns more deeply.
+        - Finally, we used `=SUM()` to group and compare weekdays versus weekends:
+            - Weekday Total =`=SUM(Totals for Days 2–6)`
+            - Weekend Total = `=SUM(Totals for Days 1 and 7)`
+        - One thing to note: in our dataset, there’s a column labeled “Item” that includes some rows with mystery products — sales that occurred but don’t have a clear item name. These still contributed to the café’s revenue, so we chose to keep them in the analysis to maintain the full picture of weekly performance. The table helps us spot when and how often these unidentified items were sold.
+        - Ultimately, this breakdown revealed that Thursday brought in the highest total revenue, making it the most profitable day of the week. This insight can help inform strategy, such as when to run promotions or introduce new menu items.
+ 
+    - Using Excel, we created this PivotTable below to determine which month generated the most revenue — which turned out to be June. We chose this method because it allows us to clearly see not only total revenue per month, but also how much each individual item contributed to that total. This makes it easier to identify which products brought in the most income.
+        - <img src="https://github.com/user-attachments/assets/fb66fc97-676e-4253-a953-813778c11613" alt="table2" style="width:900;" />
+
+        - We also included a column labeled **“Mystery Item”** — even though we don’t know exactly what product it represents, we noticed that it still brought in revenue during specific months. Rather than drop this data, we decided to keep it because it still contributes to the overall profit and supports our goal of identifying the most profitable month.
+
+
 - Additional analysis looked at
 - Any bonus feature engineering
 
