@@ -1,4 +1,4 @@
-# Cafe Financial Analysis & Insights" 
+# Cafe Financial Analysis & Insights
 
 ## Project Overview
 We were provided with a dataset by a café owner who wanted help cleaning the data and drawing insights from it. The café is preparing to launch a new set of marketing campaigns and needs to understand patterns in sales behavior. Our goal was to analyze the dataset to uncover:
