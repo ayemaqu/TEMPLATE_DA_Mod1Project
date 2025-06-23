@@ -1,4 +1,4 @@
-# Descriptive Project Title i.e. "Cafe Financial Analysis & Insights" 
+# Cafe Financial Analysis & Insights" 
 
 ## Project Overview
 We were provided with a dataset by a café owner who wanted help cleaning the data and drawing insights from it. The café is preparing to launch a new set of marketing campaigns and needs to understand patterns in sales behavior. Our goal was to analyze the dataset to uncover:
@@ -214,7 +214,7 @@ Based on our analysis, here are a few insights and actionable suggestions that c
     - Focus on promoting mid-performing items through bundles
     - Continue supporting best-sellers like salads while exploring upsell opportunities
     - Consider bundling or repositioning items instead of eliminating them outright
-## Folder Structure (EXAMPLE ONLY)
+## Folder Structure 
 ```text
 .
 ├── data/
