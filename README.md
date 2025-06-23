@@ -135,18 +135,50 @@ This analysis was approached with the mindset that the business owner is not nec
 
 ## Reflections
 ### Challenges we faced
-  
-- Any biases
-- What we would do differently next time
+1. Navigating GitHub and Version Control
+- At the start of the project, GitHub was one of our biggest challenges. We often ran into issues when trying to merge, pull, or push our work—especially when we were both working on the project at the same time. This would sometimes lead to merge conflicts, or GitHub wouldn’t know which version of the file to keep. Over time, we became more comfortable resolving these issues. We learned how to communicate better about when we were working on the same files and developed a clearer workflow to avoid overwriting each other’s progress.
+2. Dividing the Work: Python vs. Excel
+- We decided to split our approach—one of us would handle the data cleaning and analysis in Excel while the other used Python. In the beginning, this brought up an important question: what should the other person do while waiting their turn? To make the most of our time, we agreed that the person not actively cleaning could explore the dataset, take notes on potential cleaning strategies, identify patterns, or brainstorm questions and visuals. This way, both of us stayed productive and contributed equally throughout each phase.
+3. Communicating Our Thought Processes
+- Another challenge was clearly communicating our ideas to each other. It often took several attempts to explain a strategy or insight, especially when it came to formulas or technical processes. Eventually, we realized we’re both visual learners. Explaining our work using diagrams, writing things down, or showing examples made it much easier to understand each other and stay aligned.
+4. Keeping Each Other Accountable
+- We made a commitment to cross-check each other's work. If one of us did something in Excel, the other would try to replicate or confirm it in Python. At first, this was tough. If our results didn’t match, it caused confusion—but it also revealed when one of us made a mistake. Although it was frustrating at times, it turned out to be one of our best decisions. Double-checking our work helped us maintain accuracy and boosted our confidence in the final results.
+
+### Any biases
+Our dataset had several limitations that introduced potential bias, which may have affected the accuracy of our insights:
+1. **Missing Data:** A large portion of the dataset was missing important information—especially in the Location and Payment Method columns. This limited our ability to analyze trends related to customer behavior in different locations or by different payment preferences.
+    - _Bias type:_ Missing Data Bias
+        - Missing values restrict analysis and reduce the reliability of our conclusions, especially when a specific variable could have provided valuable insights.
+2. **Temporal Bias:** We noticed that some months had significantly fewer transactions—like February. This could be due to holidays, incomplete recording, or actual low activity. However, without more context, we can’t be sure. This might falsely suggest a dramatic drop in business when it could just be a data recording issue.
+    - _Bias Type:_ Temporal Bias
+        - If a month appears unprofitable due to underreported data, this can mislead stakeholders about seasonal trends.
+3. **Omitted Demographics:** The dataset doesn’t include any customer demographic data such as age, gender, or location of residence. This limits our ability to segment customer behavior and identify trends by group.
+    - _Bias Type:_ Omitted Variable Bias
+        - Without demographic context, we can’t tell who is buying what, which weakens targeted insights and could lead to overgeneralizations.
+4. **Static Pricing Assumptions:** When imputing missing values, we sometimes assumed prices were fixed per item. But in real life, prices may fluctuate due to promotions, inflation, or special events. If prices changed over time and we didn’t capture that, our revenue calculations could be off.
+    - _Bias Type:_ Static Pricing Bias
+        - Treating prices as constant may skew total revenue estimates, especially over longer periods.
+
+**Final Note on Bias**
+- Overall, while we did our best to clean and interpret the data, several gaps and assumptions (missing fields, fixed prices, and limited customer context) may have impacted our conclusions. These biases should be considered when using the analysis to make business decisions.
+
+### What we would do differently next time
+1. **Improve GitHub Communication & Workflow:** One of the challenges we faced was managing version control. We often ran into issues with merging, pushing, and pulling because we were sometimes working on the same files at the same time. Next time, we would clearly communicate who is working on what, and include more descriptive Git commit messages to document every change. This will reduce confusion and make collaboration smoother.
+2. **Understand the File/Folder Structure Early:** We would take time early on to fully understand the folder and file structure. This would help us avoid misplacing files or creating inconsistencies in naming conventions and organization.
 
 ## Takeaways & Recommendations 
-- What can you tell the cafe owner and why should they care 
+Based on our analysis, here are a few insights and actionable suggestions that can help improve business performance:
+- **Track the Time of Day for Each Transaction:** Right now, your data includes dates but not specific times. If you begin recording the time of each sale, you can discover which hours are the busiest (e.g., morning rush vs. afternoon slump). This insight could help with staffing decisions and promotional timing.
+- **Use Social Media to Boost Low Sales Periods:** We noticed dips in sales during certain months. You can combat this by running promotions or bundled deals (like "Buy a sandwich, get a tea 50% off") on social media to attract more customers during slow periods.
+- **Create Product Bundles:** Based on common purchases (e.g., tea and cookies, sandwich and drink), bundled deals could encourage customers to buy more. Consider running “Meal Combos” or “Afternoon Treats” to boost sales of lower-performing items.
+- **Label All Products:** We encountered several “mystery items” in the data — transactions with no item name. Ensuring every sale is labeled with a product name will allow for better analysis in the future and help you see exactly which products are driving revenue.
+- **Track Customer Preferences Over Time:** If possible, consider collecting more information about customer preferences or feedback. Knowing who your customers are and what they prefer helps with personalized marketing and product decisions
 
 ## Folder Structure (EXAMPLE ONLY)
 ```text
 .
 ├── data/
-│   ├── raw/
+│   ├── raw/ 
 │   └── cleaned/
 ├── excel/
 │   ├── analysis_workbook.xlsx
